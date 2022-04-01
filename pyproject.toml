@@ -6,8 +6,8 @@ authors = ["qpyparty <rejzorkalahen@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-vbml = "^1.1.post1"
 requests = "^2.27.1"
+fake-useragent = "^0.1.11"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
