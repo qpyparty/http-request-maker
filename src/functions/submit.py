@@ -12,7 +12,7 @@ def submit(labels: lbl.Labels, entries: entr.Entries) -> None:
         method=entries.method.get(),
         params=loads(entries.params.get("1.0", END)),
         headers=loads(entries.headers.get("1.0", END)),
-        send_json=entries.send_json.lower() == "true"
+        send_json=entries.send_json.get().lower() == "true",
     )
 
     labels.result.configure(text=reduce(response.text))

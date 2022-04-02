@@ -1,22 +1,23 @@
 from tkinter import Tk, Entry, Text
 
 from src.dataclasses.entries import Entries
+from src.tools import create_element as create
 
 
 def setup(root: Tk) -> Entries:
-    url = Entry(root, width=50)
+    url = create.widget(Entry, width=50, insertbackground="white")
     url.insert(0, "https://google.com/")
 
-    method = Entry(root, width=10)
+    method = create.widget(Entry, width=10, insertbackground="white")
     method.insert(0, "get")
-    
-    send_json = Entry(root, width=10)
-    send_json.insert(0, "0")
 
-    headers = Text(root, height=15, width=100)
+    send_json = create.widget(Entry, width=10, insertbackground="white")
+    send_json.insert(0, "false")
+
+    headers = create.widget(Text, height=15, width=100, insertbackground="white")
     headers.insert(1.0, "{}")
 
-    params = Text(root, height=20, width=100)
+    params = create.widget(Text, height=20, width=100, insertbackground="white")
     params.insert(1.0, "{}")
 
     method.grid(column=0, row=4)
