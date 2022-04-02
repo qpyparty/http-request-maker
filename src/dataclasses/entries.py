@@ -6,5 +6,5 @@ from tkinter import Entry, Text
 class Entries:
     method: Entry
     url: Entry
-    headers: Entry
+    headers: Text
     json: Text
