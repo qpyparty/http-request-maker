@@ -4,7 +4,8 @@ from tkinter import Entry, Text
 
 @dataclass
 class Entries:
-    method: Entry
     url: Entry
+    method: Entry
+    send_json: Entry
     headers: Text
-    json: Text
+    params: Text
